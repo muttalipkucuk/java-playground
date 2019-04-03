@@ -2,35 +2,35 @@
 
 ## CompletableFuture
 
-### RunAsync
+### runAsync
 `.runAsync(() -> System.out.println("")`
 
-### RunAsync
+### supplyAsync
 `.supplyAsync(() -> "")`
 
-### RunAsync
+### thenApply
 `.thenApply(x -> x.toString())`
 
-### RunAsync
+### thenAccept
 `.thenAccept(x -> System.out.println("x: " + x));`
 
-### RunAsync
+### thenRun
 `.thenRun(() -> System.out.println(""))`
 
-### RunAsync
+### thenCompose
 `getUser("").thenCompose(user -> getCredit(user))`
 
-### RunAsync
+### thenCombine
 `getWeight().thenCombine(getHeight(), (w, h) -> w/(h*h))`
 
-### RunAsync
+### allOf
 `CompletableFuture.allOf(getWeight(), getHeight())`
 
-### RunAsync
+### anyOf
 `CompletableFuture.anyOf(getTimeout(1), getTimeout(5), getTimeout(15))`
 
-### RunAsync
+### exceptionally
 `.exceptionally(ex -> "result"`
 
-### RunAsync
+### handle
 `.handle((res, ex) -> {ex != null? return ex.getMessage() : res;}`
