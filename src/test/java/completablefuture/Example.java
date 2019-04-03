@@ -37,7 +37,7 @@ public class Example {
         // runAsync
         // in: ()
         // out: CompletableFuture<U>
-        // example: .runAsync(() -> "")
+        // example: .supplyAsync(() -> "")
         CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> "result");
         String result = cf.get();
 
